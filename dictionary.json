@@ -1,0 +1,17 @@
+ {=(COMMENT):Choose a dictionary. Urban Dictionary, Merriam Webster, and Dictionary.com.}
+
+{=(ud):https://www.urbandictionary.com/define.php?term={args(2+)}}
+{=(d):https://www.dictionary.com/browse/{args(2+)}}
+{=(mw):https://www.merriam-webster.com/dictionary/{args(2+)}}
+
+
+{=(output):
+{if({args(1)}==-ud):{ud}|}
+{if({args(1)}==-d):{d}|}
+{if({args(1)}==-mw):{mw}|}
+{if({args(1)}==-help):listen you have 3 options, `-ud` will search urban dictionary, `-d` will search dictionary.com, and `-mw` will search merriam webster}|}
+
+
+
+{if({args(1)}== ):Specify the dictionary you want to search for your term.|}
+{if({args(2+)}== ):Specify a term you want to search.|}
